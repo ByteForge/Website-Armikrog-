@@ -6,6 +6,10 @@ Description
 
 Official website for the upcoming game "Armikrog".
 
+Developed With
+--------------
+* IntelliJ WebStorm
+
 Used Techniques
 ---------------
 * jQuery
