@@ -1,0 +1,1931 @@
+/* line 14, C:/xampp/htdocs/armikrog/css/reset.scss */
+*, html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 0;
+  font: inherit;
+  vertical-align: middle;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 27, C:/xampp/htdocs/armikrog/css/reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 30, C:/xampp/htdocs/armikrog/css/reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 33, C:/xampp/htdocs/armikrog/css/reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 36, C:/xampp/htdocs/armikrog/css/reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 40, C:/xampp/htdocs/armikrog/css/reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 44, C:/xampp/htdocs/armikrog/css/reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 48, C:/xampp/htdocs/armikrog/css/reset.scss */
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 52, C:/xampp/htdocs/armikrog/css/reset.scss */
+input:focus, textarea:focus {
+  outline: none;
+}
+
+/* line 55, C:/xampp/htdocs/armikrog/css/reset.scss */
+textarea {
+  overflow: auto;
+}
+
+@font-face {
+  font-family: "Dugfont";
+  src: url("../fonts/Dugfont_B.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Nexa";
+  src: url("../fonts/Nexa_Light_1.otf") format("opentype");
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Nexa";
+  src: url("../fonts/Nexa_Bold_1.otf") format("opentype");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../fonts/Ubuntu-L.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../fonts/Ubuntu-LI.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../fonts/Ubuntu-R.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../fonts/Ubuntu-RI.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../fonts/Ubuntu-M.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../fonts/Ubuntu-MI.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../fonts/Ubuntu-B.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../fonts/Ubuntu-BI.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 700;
+}
+
+/* line 6, C:/xampp/htdocs/armikrog/css/main.scss */
+body {
+  font-size: 0;
+  background-color: #918e89;
+}
+
+/* line 10, C:/xampp/htdocs/armikrog/css/main.scss */
+#docWrapper {
+  display: block;
+  margin: 0 auto;
+}
+
+/* line 15, C:/xampp/htdocs/armikrog/css/main.scss */
+#siteWrapper {
+  display: block;
+  margin: 0 auto;
+  max-width: 1350px;
+  background-image: url("../img/bg_site.png");
+  background-position: center top;
+  background-repeat: repeat-y;
+  -moz-box-shadow: 0 0 50px 25px #666666;
+  -webkit-box-shadow: 0 0 50px 25px #666666;
+  box-shadow: 0 0 50px 25px #666666;
+}
+
+/* line 24, C:/xampp/htdocs/armikrog/css/main.scss */
+#pageWrapper {
+  display: block;
+  margin: 0 auto;
+  padding: 0 31px 0 17px;
+  width: 1048px;
+  background-image: url("../img/bg_wrapper.png");
+}
+
+/* line 31, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainHeader {
+  display: inline-block;
+  position: relative;
+  float: right;
+  width: 752px;
+  height: 150px;
+}
+/* line 39, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainHeader > .searchAndAuth {
+  display: inline-block;
+  position: absolute;
+  margin: 5px 0 0 0;
+  right: 0;
+}
+/* line 45, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainHeader > .searchAndAuth > .searchField {
+  display: inline-block;
+  padding: 0 20px 6px 20px;
+  width: 186px;
+  height: 48px;
+  background: url("../img/site_elements.png") -551px -150px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 15px;
+  font-variant: normal;
+  color: black;
+  text-align: left;
+}
+/* line 48, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainHeader > .searchAndAuth > .searchButton {
+  display: inline-block;
+  position: relative;
+  width: 110px;
+  height: 50px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+/* line 321, C:/xampp/htdocs/armikrog/css/defaults.scss */
+#mainHeader > .searchAndAuth > .searchButton > i:nth-of-type(1) {
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+  font-variant: normal;
+  font-weight: 700;
+  color: #FAFAF8;
+  text-align: center;
+  line-height: 43px;
+  text-shadow: 0px 2px 0px black;
+}
+/* line 329, C:/xampp/htdocs/armikrog/css/defaults.scss */
+#mainHeader > .searchAndAuth > .searchButton > i:nth-of-type(2) {
+  display: inline-block;
+  position: absolute;
+  z-index: 2;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("../img/site_elements.png") -556px -204px;
+}
+/* line 51, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainHeader > .searchAndAuth > .loginButton {
+  display: inline-block;
+  position: relative;
+  width: 68px;
+  height: 50px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: default;
+  margin: 0 123px 0 0;
+}
+/* line 347, C:/xampp/htdocs/armikrog/css/defaults.scss */
+#mainHeader > .searchAndAuth > .loginButton > i:nth-of-type(1) {
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+  font-variant: normal;
+  font-weight: 700;
+  color: #FAFAF8;
+  text-align: center;
+  line-height: 43px;
+  text-shadow: 0px 2px 0px black;
+}
+/* line 355, C:/xampp/htdocs/armikrog/css/defaults.scss */
+#mainHeader > .searchAndAuth > .loginButton > i:nth-of-type(2) {
+  display: inline-block;
+  position: absolute;
+  z-index: 2;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("../img/site_elements.png") -666px -203px;
+}
+/* line 55, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainHeader > .searchAndAuth > .loginStop {
+  display: inline-block;
+  position: relative;
+  width: 32px;
+  height: 32px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: default;
+  margin: 0 25px 0 -55px;
+}
+/* line 372, C:/xampp/htdocs/armikrog/css/defaults.scss */
+#mainHeader > .searchAndAuth > .loginStop > i {
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("../img/site_elements.png") -374px -940px;
+  opacity: 0;
+}
+/* line 59, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainHeader > .searchAndAuth > .authUserField {
+  display: inline-block;
+  padding: 0 20px 6px 20px;
+  width: 186px;
+  height: 48px;
+  background: url("../img/site_elements.png") -551px -150px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 15px;
+  font-variant: normal;
+  color: black;
+  text-align: left;
+  opacity: 0;
+  position: absolute;
+  margin-top: -10px;
+  top: 50px;
+  right: 10px;
+}
+/* line 67, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainHeader > .searchAndAuth > .authPassField {
+  display: inline-block;
+  padding: 0 20px 6px 20px;
+  width: 186px;
+  height: 48px;
+  background: url("../img/site_elements.png") -551px -150px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 15px;
+  font-variant: normal;
+  color: black;
+  text-align: left;
+  opacity: 0;
+  position: absolute;
+  margin-top: -15px;
+  top: 95px;
+  right: 10px;
+}
+/* line 76, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainHeader > .mainNavigation {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+}
+/* line 81, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainHeader > .mainNavigation > .mainButton1 {
+  display: inline-block;
+  position: relative;
+  width: 140px;
+  height: 60px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+/* line 403, C:/xampp/htdocs/armikrog/css/defaults.scss */
+#mainHeader > .mainNavigation > .mainButton1 > i:nth-of-type(1) {
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  font-family: "Dugfont", sans-serif;
+  font-size: 16px;
+  color: black;
+  text-align: center;
+  line-height: 52px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+}
+/* line 411, C:/xampp/htdocs/armikrog/css/defaults.scss */
+#mainHeader > .mainNavigation > .mainButton1 > i:nth-of-type(2) {
+  display: inline-block;
+  position: absolute;
+  z-index: 2;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("../img/site_elements.png") -10px -7px;
+  opacity: 1;
+}
+/* line 422, C:/xampp/htdocs/armikrog/css/defaults.scss */
+#mainHeader > .mainNavigation > .mainButton1 > i:nth-of-type(3) {
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("../img/site_elements.png") -10px -68px;
+  opacity: 0;
+}
+/* line 84, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainHeader > .mainNavigation > .mainButton2 {
+  display: inline-block;
+  position: relative;
+  width: 140px;
+  height: 60px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+/* line 441, C:/xampp/htdocs/armikrog/css/defaults.scss */
+#mainHeader > .mainNavigation > .mainButton2 > i:nth-of-type(1) {
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  font-family: "Dugfont", sans-serif;
+  font-size: 16px;
+  color: black;
+  text-align: center;
+  line-height: 52px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+}
+/* line 449, C:/xampp/htdocs/armikrog/css/defaults.scss */
+#mainHeader > .mainNavigation > .mainButton2 > i:nth-of-type(2) {
+  display: inline-block;
+  position: absolute;
+  z-index: 2;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("../img/site_elements.png") -150px -7px;
+  opacity: 1;
+}
+/* line 460, C:/xampp/htdocs/armikrog/css/defaults.scss */
+#mainHeader > .mainNavigation > .mainButton2 > i:nth-of-type(3) {
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("../img/site_elements.png") -150px -68px;
+  opacity: 0;
+}
+/* line 87, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainHeader > .mainNavigation > .mainButton3 {
+  display: inline-block;
+  position: relative;
+  width: 140px;
+  height: 60px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+/* line 479, C:/xampp/htdocs/armikrog/css/defaults.scss */
+#mainHeader > .mainNavigation > .mainButton3 > i:nth-of-type(1) {
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  font-family: "Dugfont", sans-serif;
+  font-size: 16px;
+  color: black;
+  text-align: center;
+  line-height: 52px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+}
+/* line 487, C:/xampp/htdocs/armikrog/css/defaults.scss */
+#mainHeader > .mainNavigation > .mainButton3 > i:nth-of-type(2) {
+  display: inline-block;
+  position: absolute;
+  z-index: 2;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("../img/site_elements.png") -288px -7px;
+  opacity: 1;
+}
+/* line 498, C:/xampp/htdocs/armikrog/css/defaults.scss */
+#mainHeader > .mainNavigation > .mainButton3 > i:nth-of-type(3) {
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("../img/site_elements.png") -288px -68px;
+  opacity: 0;
+}
+/* line 90, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainHeader > .mainNavigation > .mainButton4 {
+  display: inline-block;
+  position: relative;
+  width: 140px;
+  height: 60px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+/* line 517, C:/xampp/htdocs/armikrog/css/defaults.scss */
+#mainHeader > .mainNavigation > .mainButton4 > i:nth-of-type(1) {
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  font-family: "Dugfont", sans-serif;
+  font-size: 16px;
+  color: black;
+  text-align: center;
+  line-height: 52px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+}
+/* line 526, C:/xampp/htdocs/armikrog/css/defaults.scss */
+#mainHeader > .mainNavigation > .mainButton4 > i:nth-of-type(2) {
+  display: inline-block;
+  position: absolute;
+  z-index: 2;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("../img/site_elements.png") -425px -7px;
+  opacity: 1;
+}
+/* line 537, C:/xampp/htdocs/armikrog/css/defaults.scss */
+#mainHeader > .mainNavigation > .mainButton4 > i:nth-of-type(3) {
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("../img/site_elements.png") -425px -68px;
+  opacity: 0;
+}
+
+/* line 95, C:/xampp/htdocs/armikrog/css/main.scss */
+#sideNavigation {
+  display: inline-block;
+  float: left;
+  top: 0;
+  left: 17px;
+  width: 235px;
+  height: 500px;
+}
+/* line 104, C:/xampp/htdocs/armikrog/css/main.scss */
+#sideNavigation > .logo {
+  display: block;
+  position: relative;
+  z-index: 1;
+  margin: 30px 0 0 5px;
+  width: 300px;
+  height: 270px;
+}
+/* line 109, C:/xampp/htdocs/armikrog/css/defaults.scss */
+#sideNavigation > .logo > i:nth-of-type(1) {
+  display: inline-block;
+  position: absolute;
+  z-index: 2;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("../img/site_elements.png") -752px -16px;
+  opacity: 1;
+}
+/* line 120, C:/xampp/htdocs/armikrog/css/defaults.scss */
+#sideNavigation > .logo > i:nth-of-type(2) {
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("../img/site_elements.png") -1056px -16px;
+  opacity: 0;
+}
+/* line 107, C:/xampp/htdocs/armikrog/css/main.scss */
+#sideNavigation > .menu {
+  display: block;
+  position: relative;
+  z-index: 2;
+  margin: -15px 0 0 25px;
+}
+/* line 113, C:/xampp/htdocs/armikrog/css/main.scss */
+#sideNavigation > .menu > .list {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  margin: 8px 0 0 16px;
+  width: 215px;
+}
+/* line 925, C:/xampp/htdocs/armikrog/css/defaults.scss */
+#sideNavigation > .menu > .list li {
+  height: 70px;
+  font-family: "Dugfont", sans-serif;
+  font-size: 20px;
+  color: black;
+  text-align: center;
+  line-height: 62px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+/* line 116, C:/xampp/htdocs/armikrog/css/main.scss */
+#sideNavigation > .menu > div {
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+/* line 565, C:/xampp/htdocs/armikrog/css/defaults.scss */
+#sideNavigation > .menu > div > i:nth-of-type(1) {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 250px;
+  height: 380px;
+  background: url("../img/site_elements.png") -19px -547px;
+  opacity: 1;
+}
+/* line 575, C:/xampp/htdocs/armikrog/css/defaults.scss */
+#sideNavigation > .menu > div > i:nth-of-type(2) {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 250px;
+  height: 380px;
+  background: url("../img/site_elements.png") -269px -547px;
+  opacity: 0;
+}
+/* line 585, C:/xampp/htdocs/armikrog/css/defaults.scss */
+#sideNavigation > .menu > div > i:nth-of-type(3) {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 250px;
+  height: 380px;
+  background: url("../img/site_elements.png") -519px -547px;
+  opacity: 0;
+}
+/* line 595, C:/xampp/htdocs/armikrog/css/defaults.scss */
+#sideNavigation > .menu > div > i:nth-of-type(4) {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 250px;
+  height: 380px;
+  background: url("../img/site_elements.png") -769px -547px;
+  opacity: 0;
+}
+/* line 605, C:/xampp/htdocs/armikrog/css/defaults.scss */
+#sideNavigation > .menu > div > i:nth-of-type(5) {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 250px;
+  height: 380px;
+  background: url("../img/site_elements.png") -1019px -547px;
+  opacity: 0;
+}
+/* line 615, C:/xampp/htdocs/armikrog/css/defaults.scss */
+#sideNavigation > .menu > div > i:nth-of-type(6) {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 250px;
+  height: 380px;
+  background: url("../img/site_elements.png") -1269px -547px;
+  opacity: 0;
+}
+
+/* line 121, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection {
+  display: block;
+  float: right;
+  top: 200px;
+  right: 31px;
+  width: 70%;
+  height: 500px;
+}
+/* line 130, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .content {
+  display: block;
+  float: left;
+  width: 420px;
+}
+/* line 135, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .content > h1 {
+  margin: 40px 0 28px 0;
+  font-family: "Dugfont", sans-serif;
+  font-size: 24px;
+  color: black;
+  text-align: left;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+}
+/* line 139, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .content > p {
+  margin: 0 0 15px 0;
+  padding: 0 50px 0 0;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: black;
+  line-height: 18px;
+  text-align: justify;
+}
+/* line 144, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .content > blockquote {
+  margin: 0 0 15px 0;
+  padding: 0 50px 0 0;
+}
+/* line 147, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .content > blockquote > p {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: black;
+  line-height: 18px;
+  text-align: left;
+}
+/* line 149, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .content > blockquote > p:before {
+  content: '"';
+}
+/* line 152, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .content > blockquote > p:after {
+  content: '"';
+}
+/* line 156, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .content > blockquote > cite {
+  display: block;
+  text-align: right;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: black;
+  line-height: 18px;
+  text-align: right;
+}
+/* line 160, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .content > blockquote > cite:before {
+  content: "- ";
+}
+/* line 166, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .content > blockquote:nth-of-type(3) > p {
+  font-style: italic;
+}
+/* line 170, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .content > .arrowToRight {
+  margin: 0 0 0 -20px;
+  display: inline-block;
+  position: relative;
+  width: 135px;
+  height: 84px;
+  background: url("../img/site_elements.png") -580px -335px;
+}
+/* line 174, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .content > .buyNow {
+  display: inline-block;
+  position: relative;
+  width: 142px;
+  height: 135px;
+}
+/* line 639, C:/xampp/htdocs/armikrog/css/defaults.scss */
+#mainSection > .content > .buyNow > i:nth-of-type(1) {
+  display: inline-block;
+  position: absolute;
+  z-index: 2;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("../img/site_elements.png") -820px -345px;
+  opacity: 1;
+}
+/* line 650, C:/xampp/htdocs/armikrog/css/defaults.scss */
+#mainSection > .content > .buyNow > i:nth-of-type(2) {
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("../img/site_elements.png") -990px -345px;
+  opacity: 0;
+}
+/* line 177, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .content > .arrowToLeft {
+  display: inline-block;
+  position: relative;
+  width: 135px;
+  height: 84px;
+  background: url("../img/site_elements.png") -580px -440px;
+}
+/* line 181, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .product {
+  display: block;
+  float: right;
+  width: 275px;
+}
+/* line 186, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .product > .box {
+  margin: 35px 0 0 0;
+  display: inline-block;
+  position: relative;
+  width: 260px;
+  height: 340px;
+  background: url("../img/site_elements.png") -32px -952px;
+}
+/* line 190, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .product > .price {
+  margin: -10px 40px 0 0;
+  font-family: "Nexa", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: black;
+  letter-spacing: 1px;
+  line-height: 18px;
+  text-align: right;
+}
+/* line 194, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .product > .platform {
+  margin: 16px 40px 0 0;
+  font-family: "Nexa", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: black;
+  letter-spacing: 1px;
+  line-height: 18px;
+  text-align: right;
+}
+/* line 198, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .product > figure {
+  margin: -67px 0 0 5px;
+  display: block;
+  position: relative;
+  z-index: 1;
+  width: 140px;
+  height: 190px;
+}
+/* line 70, C:/xampp/htdocs/armikrog/css/defaults.scss */
+#mainSection > .product > figure > i:nth-of-type(1) {
+  display: inline-block;
+  position: absolute;
+  z-index: 2;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("../img/site_elements.png") -1205px -325px;
+  opacity: 1;
+}
+/* line 81, C:/xampp/htdocs/armikrog/css/defaults.scss */
+#mainSection > .product > figure > i:nth-of-type(2) {
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("../img/site_elements.png") -1365px -325px;
+  opacity: 0;
+}
+
+/* line 206, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainFooter {
+  display: block;
+  clear: both;
+  padding: 50px 70px 0 70px;
+  width: 100%;
+  height: 365px;
+  background-image: url("../img/bg_footer.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+/* line 216, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainFooter > .social {
+  display: inline-block;
+  float: left;
+  width: 34%;
+  height: 250px;
+}
+/* line 222, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainFooter > .social > p {
+  margin: 0 0 22px 0;
+  font-family: "Dugfont", sans-serif;
+  font-size: 18px;
+  color: white;
+  letter-spacing: 2px;
+  text-align: left;
+  text-shadow: 0px 2px 0px black;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+/* line 226, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainFooter > .social > .facebook {
+  margin-bottom: 10px;
+  display: inline-block;
+  position: relative;
+  width: 90px;
+  height: 90px;
+}
+/* line 687, C:/xampp/htdocs/armikrog/css/defaults.scss */
+#mainFooter > .social > .facebook > i:nth-of-type(1) {
+  display: inline-block;
+  position: absolute;
+  z-index: 2;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("../img/site_elements.png") -6px -141px;
+  opacity: 1;
+}
+/* line 698, C:/xampp/htdocs/armikrog/css/defaults.scss */
+#mainFooter > .social > .facebook > i:nth-of-type(2) {
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("../img/site_elements.png") -6px -335px;
+  opacity: 0;
+}
+/* line 230, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainFooter > .social > .twitter {
+  margin-bottom: 10px;
+  display: inline-block;
+  position: relative;
+  width: 90px;
+  height: 90px;
+}
+/* line 716, C:/xampp/htdocs/armikrog/css/defaults.scss */
+#mainFooter > .social > .twitter > i:nth-of-type(1) {
+  display: inline-block;
+  position: absolute;
+  z-index: 2;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("../img/site_elements.png") -100px -141px;
+  opacity: 1;
+}
+/* line 727, C:/xampp/htdocs/armikrog/css/defaults.scss */
+#mainFooter > .social > .twitter > i:nth-of-type(2) {
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("../img/site_elements.png") -100px -335px;
+  opacity: 0;
+}
+/* line 234, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainFooter > .social > .youtube {
+  margin-bottom: 10px;
+  display: inline-block;
+  position: relative;
+  width: 90px;
+  height: 90px;
+}
+/* line 745, C:/xampp/htdocs/armikrog/css/defaults.scss */
+#mainFooter > .social > .youtube > i:nth-of-type(1) {
+  display: inline-block;
+  position: absolute;
+  z-index: 2;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("../img/site_elements.png") -194px -141px;
+  opacity: 1;
+}
+/* line 756, C:/xampp/htdocs/armikrog/css/defaults.scss */
+#mainFooter > .social > .youtube > i:nth-of-type(2) {
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("../img/site_elements.png") -194px -335px;
+  opacity: 0;
+}
+/* line 238, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainFooter > .social > .googlep {
+  display: inline-block;
+  position: relative;
+  width: 90px;
+  height: 90px;
+}
+/* line 774, C:/xampp/htdocs/armikrog/css/defaults.scss */
+#mainFooter > .social > .googlep > i:nth-of-type(1) {
+  display: inline-block;
+  position: absolute;
+  z-index: 2;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("../img/site_elements.png") -6px -235px;
+  opacity: 1;
+}
+/* line 785, C:/xampp/htdocs/armikrog/css/defaults.scss */
+#mainFooter > .social > .googlep > i:nth-of-type(2) {
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("../img/site_elements.png") -6px -429px;
+  opacity: 0;
+}
+/* line 241, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainFooter > .social > .pinterest {
+  display: inline-block;
+  position: relative;
+  width: 90px;
+  height: 90px;
+}
+/* line 803, C:/xampp/htdocs/armikrog/css/defaults.scss */
+#mainFooter > .social > .pinterest > i:nth-of-type(1) {
+  display: inline-block;
+  position: absolute;
+  z-index: 2;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("../img/site_elements.png") -100px -235px;
+  opacity: 1;
+}
+/* line 814, C:/xampp/htdocs/armikrog/css/defaults.scss */
+#mainFooter > .social > .pinterest > i:nth-of-type(2) {
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("../img/site_elements.png") -100px -429px;
+  opacity: 0;
+}
+/* line 244, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainFooter > .social > .rss {
+  display: inline-block;
+  position: relative;
+  width: 90px;
+  height: 90px;
+}
+/* line 832, C:/xampp/htdocs/armikrog/css/defaults.scss */
+#mainFooter > .social > .rss > i:nth-of-type(1) {
+  display: inline-block;
+  position: absolute;
+  z-index: 2;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("../img/site_elements.png") -194px -235px;
+  opacity: 1;
+}
+/* line 843, C:/xampp/htdocs/armikrog/css/defaults.scss */
+#mainFooter > .social > .rss > i:nth-of-type(2) {
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("../img/site_elements.png") -194px -429px;
+  opacity: 0;
+}
+/* line 248, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainFooter > .contact {
+  display: inline-block;
+  float: left;
+  width: 37%;
+  height: 250px;
+}
+/* line 254, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainFooter > .contact > .list {
+  display: block;
+  margin: 40px 0 0 0;
+}
+/* line 258, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainFooter > .contact > .list > li {
+  display: list-item;
+  margin: 0 0 10px 0;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-size: 10px;
+  color: white;
+  letter-spacing: 1px;
+  text-align: left;
+}
+/* line 262, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainFooter > .contact > .list > li:before {
+  content: "";
+  display: inline-block;
+  margin-right: 5px;
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+  background: url("../img/site_elements.png") -299px -167px;
+}
+/* line 273, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainFooter > .contact > .logo {
+  display: block;
+  margin: -12px auto 0 auto;
+  width: 93px;
+  height: 93px;
+  background: url("../img/site_elements.png") -352px -139px;
+}
+/* line 277, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainFooter > .newsletter {
+  display: inline-block;
+  float: left;
+  width: 29%;
+  height: 250px;
+}
+/* line 284, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainFooter > .newsletter form > label {
+  display: block;
+  margin: -6px 0 0 7px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: white;
+  letter-spacing: 1px;
+  text-align: left;
+}
+/* line 289, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainFooter > .newsletter form > .name {
+  display: block;
+  padding: 0 20px 10px 15px;
+  width: 240px;
+  height: 50px;
+  background: url("../img/site_elements.png") -299px -257px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 15px;
+  font-variant: normal;
+  color: black;
+  text-align: left;
+}
+/* line 292, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainFooter > .newsletter form > .email {
+  display: block;
+  padding: 0 20px 10px 15px;
+  width: 240px;
+  height: 50px;
+  background: url("../img/site_elements.png") -299px -257px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 15px;
+  font-variant: normal;
+  color: black;
+  text-align: left;
+}
+/* line 295, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainFooter > .newsletter form > .message {
+  display: block;
+  padding: 22px 20px 20px 20px;
+  width: 240px;
+  height: 109px;
+  resize: none;
+  background: url("../img/site_elements.png") -300px -308px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 15px;
+  font-variant: normal;
+  color: black;
+  text-align: left;
+}
+/* line 298, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainFooter > .newsletter form > button {
+  margin-left: 135px;
+  display: inline-block;
+  position: relative;
+  padding: 0 0 4px 0;
+  width: 104px;
+  height: 42px;
+  background: url("../img/site_elements.png") -436px -417px;
+  font-family: "Dugfont", sans-serif;
+  font-size: 12px;
+  color: black;
+  letter-spacing: 1px;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+/* line 304, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainFooter > .copyright {
+  display: inline-block;
+  position: relative;
+  clear: both;
+  margin: -7px 0 0 0;
+  width: 100%;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: white;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* line 347, C:/xampp/htdocs/armikrog/css/main.scss */
+#lightboxOverlay {
+  display: block;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+}
+/* line 358, C:/xampp/htdocs/armikrog/css/main.scss */
+#lightboxOverlay > div {
+  display: block;
+  margin: 0 auto;
+  width: 500px;
+}
+/* line 363, C:/xampp/htdocs/armikrog/css/main.scss */
+#lightboxOverlay > div > .arrowToLeft {
+  margin: 0 5px 0 0;
+  display: inline-block;
+  width: 70px;
+  height: 68px;
+  background: url("../img/site_elements.png") -357px -1116px;
+}
+/* line 367, C:/xampp/htdocs/armikrog/css/main.scss */
+#lightboxOverlay > div > .container {
+  display: inline-block;
+  position: relative;
+  width: 250px;
+  height: 100px;
+}
+/* line 373, C:/xampp/htdocs/armikrog/css/main.scss */
+#lightboxOverlay > div > .container > .close {
+  display: inline-block;
+  position: absolute;
+  z-index: 100;
+  top: 5px;
+  right: 5px;
+  width: 32px;
+  height: 32px;
+}
+/* line 382, C:/xampp/htdocs/armikrog/css/main.scss */
+#lightboxOverlay > div > .container > .close > div {
+  display: inline-block;
+  position: relative;
+  width: 32px;
+  height: 32px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+/* line 335, C:/xampp/htdocs/armikrog/css/main.scss */
+#lightboxOverlay > div > .container > .close > div > i {
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("../img/site_elements.png") -374px -940px;
+}
+/* line 386, C:/xampp/htdocs/armikrog/css/main.scss */
+#lightboxOverlay > div > .container > i {
+  display: block;
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
+  background-color: crimson;
+}
+/* line 395, C:/xampp/htdocs/armikrog/css/main.scss */
+#lightboxOverlay > div > .container > img {
+  margin: 0 0 0 2px;
+  width: 100%;
+  height: 100%;
+}
+/* line 401, C:/xampp/htdocs/armikrog/css/main.scss */
+#lightboxOverlay > div > .arrowToRight {
+  margin: 0 0 0 5px;
+  display: inline-block;
+  width: 70px;
+  height: 68px;
+  background: url("../img/site_elements.png") -357px -1010px;
+}
+
+/* line 423, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .screenshots {
+  display: block;
+  padding: 30px 0 0 0;
+  width: 100%;
+  height: 100%;
+}
+/* line 429, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .screenshots > div {
+  display: inline-block;
+  position: relative;
+  margin: 0 5px 0 0;
+  width: 160px;
+  height: 150px;
+}
+/* line 436, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .screenshots > div > i {
+  z-index: 2;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../img/site_elements.png") -1225px -1493px;
+}
+/* line 440, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .screenshots > div > img {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 19px;
+  left: 20px;
+}
+
+/* line 451, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .theMaking {
+  display: block;
+  padding: 30px 0 0 0;
+  width: 100%;
+  height: 100%;
+}
+/* line 457, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .theMaking > div {
+  display: inline-block;
+  position: relative;
+  margin: 0 5px 0 0;
+  width: 160px;
+  height: 150px;
+}
+/* line 464, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .theMaking > div > i {
+  z-index: 2;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../img/site_elements.png") -1225px -1493px;
+}
+/* line 468, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .theMaking > div > img {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 19px;
+  left: 20px;
+}
+
+/* line 603, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .characters {
+  display: block;
+  width: 100%;
+  height: 500px;
+}
+/* line 608, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .characters > h1 {
+  padding: 40px 0 0 18px;
+  height: 100px;
+  font-family: "Dugfont", sans-serif;
+  font-size: 24px;
+  color: black;
+  text-align: left;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+}
+/* line 613, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .characters > p {
+  padding: 0 190px 25px 10px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: black;
+  line-height: 18px;
+  text-align: justify;
+}
+/* line 617, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .characters > div:nth-of-type(1) {
+  display: inline-block;
+  position: relative;
+  width: 420px;
+  height: 305px;
+}
+/* line 624, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .characters > div:nth-of-type(1) > div:nth-of-type(1) {
+  display: inline-block;
+  position: absolute;
+  z-index: 10;
+  top: 25px;
+  left: 5px;
+  width: 50%;
+  height: 270px;
+  opacity: 0;
+}
+/* line 634, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .characters > div:nth-of-type(1) > div:nth-of-type(2) {
+  display: inline-block;
+  position: absolute;
+  z-index: 9;
+  top: 100px;
+  right: 5px;
+  width: 50%;
+  height: 185px;
+  opacity: 0;
+}
+/* line 537, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .characters > div:nth-of-type(1) > i:nth-of-type(1) {
+  display: block;
+  position: absolute;
+  z-index: 3;
+  margin: 0 0 0 -30px;
+  top: 0;
+  left: 0;
+  width: 450px;
+  height: 295px;
+  background: url("../img/site_elements.png") -1066px -1635px;
+}
+/* line 548, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .characters > div:nth-of-type(1) > i:nth-of-type(2) {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  margin: 0 0 0 -30px;
+  top: 0;
+  left: 0;
+  width: 450px;
+  height: 295px;
+  background: url("../img/site_elements.png") -1066px -1916px;
+  opacity: 0;
+}
+/* line 560, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .characters > div:nth-of-type(1) > i:nth-of-type(3) {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  margin: 0 0 0 -30px;
+  top: 0;
+  left: 0;
+  width: 450px;
+  height: 295px;
+  background: url("../img/site_elements.png") -1066px -2205px;
+  opacity: 0;
+}
+/* line 646, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .characters > div:nth-of-type(2) {
+  display: inline-block;
+  position: relative;
+  float: right;
+  padding: 40px 35px 0 15px;
+  width: 268px;
+  height: 305px;
+  background: url("../img/site_elements.png") -1175px -960px;
+}
+/* line 655, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .characters > div:nth-of-type(2) > h2 {
+  margin: 0 0 15px 0;
+  font-family: "Dugfont", sans-serif;
+  font-size: 16px;
+  color: black;
+  letter-spacing: 1px;
+  text-align: left;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+}
+/* line 659, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .characters > div:nth-of-type(2) > p {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-size: 13px;
+  color: black;
+  letter-spacing: 1px;
+  text-align: left;
+  line-height: 16px;
+}
+
+/* line 666, C:/xampp/htdocs/armikrog/css/main.scss */
+#toGallery {
+  display: block;
+  clear: both;
+  padding: 22px 0 0 20px;
+  height: 180px;
+}
+/* line 672, C:/xampp/htdocs/armikrog/css/main.scss */
+#toGallery > div:nth-of-type(1) {
+  display: inline-block;
+  margin: 0 5px 0 0;
+  padding: 15px 22px 20px 20px;
+  width: 265px;
+  height: 160px;
+  background: url("../img/site_elements.png") -1169px -1312px;
+}
+/* line 526, C:/xampp/htdocs/armikrog/css/main.scss */
+#toGallery > div:nth-of-type(1) > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+/* line 675, C:/xampp/htdocs/armikrog/css/main.scss */
+#toGallery > div:nth-of-type(2) {
+  display: inline-block;
+  margin: 0 5px 0 0;
+  padding: 15px 22px 20px 20px;
+  width: 265px;
+  height: 160px;
+  background: url("../img/site_elements.png") -1169px -1312px;
+}
+/* line 526, C:/xampp/htdocs/armikrog/css/main.scss */
+#toGallery > div:nth-of-type(2) > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+/* line 678, C:/xampp/htdocs/armikrog/css/main.scss */
+#toGallery > div:nth-of-type(3) {
+  display: inline-block;
+  margin: 0 5px 0 0;
+  padding: 15px 22px 20px 20px;
+  width: 265px;
+  height: 160px;
+  background: url("../img/site_elements.png") -1169px -1312px;
+}
+/* line 526, C:/xampp/htdocs/armikrog/css/main.scss */
+#toGallery > div:nth-of-type(3) > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+/* line 681, C:/xampp/htdocs/armikrog/css/main.scss */
+#toGallery > .toGalleryButton {
+  margin: 10px 0 0 0;
+  display: inline-block;
+  position: relative;
+  padding: 14px 40px 0 0;
+  width: 125px;
+  height: 80px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+/* line 582, C:/xampp/htdocs/armikrog/css/main.scss */
+#toGallery > .toGalleryButton > i:nth-of-type(1) {
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+  font-variant: normal;
+  font-weight: 700;
+  color: black;
+  text-align: center;
+  line-height: 43px;
+  text-shadow: 1px 1px 0 #fafaf8;
+}
+/* line 590, C:/xampp/htdocs/armikrog/css/main.scss */
+#toGallery > .toGalleryButton > i:nth-of-type(2) {
+  display: inline-block;
+  position: absolute;
+  z-index: 2;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("../img/site_elements.png") -333px -1225px;
+}
+
+/* line 751, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .gears {
+  display: block;
+  float: left;
+  width: 368px;
+  height: 500px;
+}
+/* line 757, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .gears > div {
+  margin: 25px 0 0 -10px;
+  width: 100%;
+  height: 100%;
+  background: url("../img/site_elements.png") -59px -1451px;
+}
+/* line 762, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .gearDesc {
+  display: block;
+  float: right;
+  padding: 50px 35px 0 0;
+  width: 328px;
+  height: 500px;
+}
+/* line 768, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .gearDesc > div {
+  margin: 0 0 55px 0;
+}
+/* line 771, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .gearDesc > div > h2 {
+  margin: 0 0 17px 0;
+  font-family: "Dugfont", sans-serif;
+  font-size: 16px;
+  color: black;
+  letter-spacing: 1px;
+  text-align: left;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+}
+/* line 775, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .gearDesc > div > i {
+  display: block;
+  margin: 0 0 15px 0;
+  font-family: "Nexa", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: black;
+  letter-spacing: 1px;
+  text-align: left;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+}
+/* line 780, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .gearDesc > div > p {
+  margin: 0 0 15px 0;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  color: black;
+  letter-spacing: 1px;
+  text-align: justify;
+  line-height: 14px;
+}
+/* line 784, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .gearDesc > div > div {
+  margin: 0 0 0 -8px;
+  display: inline-block;
+  position: relative;
+  width: 145px;
+  height: 55px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+/* line 729, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .gearDesc > div > div > i:nth-of-type(1) {
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+  padding: 3px 0 0 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+  font-variant: normal;
+  font-weight: 700;
+  color: #FAFAF8;
+  text-align: center;
+  line-height: 43px;
+  text-shadow: 0px 2px 0px black;
+}
+/* line 738, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .gearDesc > div > div > i:nth-of-type(2) {
+  display: inline-block;
+  position: absolute;
+  z-index: 2;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("../img/site_elements.png") -575px -264px;
+}
+
+/* line 872, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .community {
+  display: block;
+  float: left;
+  width: 480px;
+  height: 500px;
+  /*
+  > div:nth-of-type(1) > h3 {
+      color: #E6520B;
+  }
+  */
+}
+/* line 885, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .community > div > h3 {
+  display: inline-block;
+  margin: 20px 0 22px 0;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: black;
+  letter-spacing: 1px;
+  text-align: left;
+}
+/* line 890, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .community > div > i {
+  display: inline-block;
+  float: right;
+  margin: 27px 0 0 0;
+  width: 100px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-size: 10px;
+  color: #58595B;
+  letter-spacing: 1px;
+  text-align: left;
+}
+/* line 897, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .community > div > p {
+  display: block;
+  margin: 5px 0 17px 0;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-size: 13px;
+  color: #414042;
+  letter-spacing: 1px;
+  text-align: left;
+}
+/* line 904, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .posts {
+  display: block;
+  float: right;
+  margin: 25px 0 0 0;
+  width: 215px;
+  height: 500px;
+}
+/* line 911, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .posts > div:nth-of-type(1) > div {
+  display: inline-block;
+  float: left;
+  padding: 60px 0 0 0;
+  width: 65px;
+  height: 80px;
+  background: url("../img/site_elements.png") 7px -1345px;
+}
+/* line 912, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .posts > div:nth-of-type(2) > div {
+  display: inline-block;
+  float: left;
+  padding: 60px 0 0 0;
+  width: 65px;
+  height: 80px;
+  background: url("../img/site_elements.png") -63px -1345px;
+}
+/* line 913, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .posts > div:nth-of-type(3) > div {
+  display: inline-block;
+  float: left;
+  padding: 60px 0 0 0;
+  width: 65px;
+  height: 80px;
+  background: url("../img/site_elements.png") 7px -1345px;
+}
+/* line 914, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .posts > div:nth-of-type(4) > div {
+  display: inline-block;
+  float: left;
+  padding: 60px 0 0 0;
+  width: 65px;
+  height: 80px;
+  background: url("../img/site_elements.png") -134px -1345px;
+}
+/* line 915, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .posts > div:nth-of-type(5) > div {
+  display: inline-block;
+  float: left;
+  padding: 60px 0 0 0;
+  width: 65px;
+  height: 80px;
+  background: url("../img/site_elements.png") -205px -1345px;
+}
+/* line 917, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .posts > div {
+  clear: both;
+  margin: 0 0 47px 0;
+  padding: 0 30px 0 0;
+}
+/* line 922, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .posts > div > div {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-size: 10px;
+  color: #58595B;
+  letter-spacing: 1px;
+  text-align: center;
+}
+/* line 925, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .posts > div > p {
+  margin: 0 0 15px 80px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  color: black;
+  letter-spacing: 1px;
+  text-align: left;
+}
+/* line 929, C:/xampp/htdocs/armikrog/css/main.scss */
+#mainSection > .posts > div > i {
+  display: inline-block;
+  margin: 0 0 0 15px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  color: #58595B;
+  letter-spacing: 0.5px;
+  text-align: left;
+}

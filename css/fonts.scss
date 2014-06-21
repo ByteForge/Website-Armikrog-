@@ -1,0 +1,113 @@
+// Font sizes
+    $thin:          100;
+    $extra-light:   200;
+    $light:         300;
+    $regular:       400;
+    $medium:        500;
+    $semi-bold:     600;
+    $bold:          700;
+    $black:         800;
+    $ultra-bold:    900;
+
+// Font format types
+    $fontFormat-OpenType: format('opentype');
+    $fontFormat-TrueType: format('truetype');
+
+// Font effects
+    @mixin anti-aliasing {
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
+        text-shadow: rgba(0,0,0,.01) 0 0 1px;
+    }
+    // TODO: compatibility with anti-aliasing mixin (text-shadow VS text-shadow - collision)
+    @mixin drop-shadow($xCoord: 0px, $yCoord: 2px, $blurRadius: 0px, $color: black) {
+        text-shadow: $xCoord $yCoord $blurRadius $color;
+    }
+
+// Custom fonts
+    // Dugfont
+    $fontDugfont: 'Dugfont';
+        @font-face {
+            // Bold 700
+            font-family: $fontDugfont;
+            src: url("../fonts/Dugfont_B.ttf") $fontFormat-TrueType;
+            font-style:  normal; // regular
+            font-weight: $bold;
+        }
+
+    // Nexa
+    $fontNexa: 'Nexa';
+        // Light 300
+        @font-face {
+            font-family: $fontNexa;
+            src: url("../fonts/Nexa_Light_1.otf") $fontFormat-OpenType;
+            font-style:  normal; // regular
+            font-weight: $light;
+        }
+        // Bold 700
+        @font-face {
+            font-family: $fontNexa;
+            src: url("../fonts/Nexa_Bold_1.otf") $fontFormat-OpenType;
+            font-style:  normal; // regular
+            font-weight: $bold;
+        }
+
+    // Ubuntu
+    $fontUbuntu: 'Ubuntu';
+        // Light 300
+        @font-face {
+            font-family: $fontUbuntu;
+            src: url("../fonts/Ubuntu-L.ttf") $fontFormat-TrueType;
+            font-style:  normal; // regular
+            font-weight: $light;
+            // src: local('FontName1'), url('fontname1.ttf') format('truetype');
+        }
+        // Light 300 Italic
+        @font-face {
+            font-family: $fontUbuntu;
+            src: url("../fonts/Ubuntu-LI.ttf") $fontFormat-TrueType;
+            font-style:  italic;
+            font-weight: $light;
+        }
+        // Normal 400
+        @font-face {
+            font-family: $fontUbuntu;
+            src: url("../fonts/Ubuntu-R.ttf") $fontFormat-TrueType;
+            font-style:  normal; // regular
+            font-weight: $regular;
+        }
+        // Normal 400 Italic
+        @font-face {
+            font-family: $fontUbuntu;
+            src: url("../fonts/Ubuntu-RI.ttf") $fontFormat-TrueType;
+            font-style:  italic;
+            font-weight: $regular;
+        }
+        // Medium 500
+        @font-face {
+            font-family: $fontUbuntu;
+            src: url("../fonts/Ubuntu-M.ttf") $fontFormat-TrueType;
+            font-style:  normal; // regular
+            font-weight: $medium;
+        }
+        // Medium 500 Italic
+        @font-face {
+            font-family: $fontUbuntu;
+            src: url("../fonts/Ubuntu-MI.ttf") $fontFormat-TrueType;
+            font-style:  italic;
+            font-weight: $medium;
+        }
+        // Bold 700
+        @font-face {
+            font-family: $fontUbuntu;
+            src: url("../fonts/Ubuntu-B.ttf") $fontFormat-TrueType;
+            font-style:  normal; // regular
+            font-weight: $bold;
+        }
+        // Bold 700 Italic
+        @font-face {
+            font-family: $fontUbuntu;
+            src: url("../fonts/Ubuntu-BI.ttf") $fontFormat-TrueType;
+            font-style:  italic;
+            font-weight: $bold;
+        }

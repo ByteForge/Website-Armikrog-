@@ -1,0 +1,968 @@
+@import 'reset';
+@import 'fonts';
+
+// Site-wise defaults
+    $authFieldsOpen: false;
+
+// Colors
+    $backgroundColor: #918E89;
+
+// Images
+    $backgroundSite: url('../img/bg_site.png');
+    $backgroundWrapper: url('../img/bg_wrapper.png');
+    $backgroundFooter: url('../img/bg_footer.png');
+    $siteElements: url('../img/site_elements.png');
+    $transparentURI-Image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7');
+        // Bullet
+        $imageBullet: $siteElements  -299px -167px;
+        // Arrows
+            // Buy now - to right
+            $imageArrowBuyNowToRight-width:  135px;
+            $imageArrowBuyNowToRight-height: 84px;
+                $imageArrowBuyNowToRight: $siteElements -580px -335px;
+
+            @mixin arrowBuyNowToRight {
+                display: inline-block;
+                position: relative;
+                width: $imageArrowBuyNowToRight-width;
+                height: $imageArrowBuyNowToRight-height;
+                background: $imageArrowBuyNowToRight;
+            }
+            // Buy now - to left
+            $imageArrowBuyNowToLeft-width:  135px;
+            $imageArrowBuyNowToLeft-height: 84px;
+                $imageArrowBuyNowToLeft:  $siteElements -580px -440px;
+
+            @mixin arrowBuyNowToLeft {
+                display: inline-block;
+                position: relative;
+                width: $imageArrowBuyNowToLeft-width;
+                height: $imageArrowBuyNowToLeft-height;
+                background: $imageArrowBuyNowToLeft;
+            }
+
+        // Product specifics (figures, boxes, gears, etc.)
+            // Product box
+            $prodProductBox-width:  260px;
+            $prodProductBox-height: 340px;
+                $prodProductBox: $siteElements -32px -952px;
+
+            @mixin prodProductBox {
+                display: inline-block;
+                position: relative;
+                width: $prodProductBox-width;
+                height: $prodProductBox-height;
+                background: $prodProductBox;
+            }
+            // Sad/happy Tommynaut
+            $prodSadHappyTommynaut-width:  140px;
+            $prodSadHappyTommynaut-height: 190px;
+                $prodSadHappyTommynaut-Normal: $siteElements -1205px -325px;
+                $prodSadHappyTommynaut-Hover:  $siteElements -1365px -325px;
+
+            @mixin prodSadHappyTommynaut {
+                display: block;
+                position: relative;
+                z-index: 1;
+                width: $prodSadHappyTommynaut-width;
+                height: $prodSadHappyTommynaut-height;
+
+                & > i:nth-of-type(1) {
+                    display: inline-block;
+                    position: absolute;
+                    z-index: 2;
+                    top: 0px;
+                    left: 0px;
+                    width: 100%;
+                    height: 100%;
+                    background: $prodSadHappyTommynaut-Normal;
+                    opacity: 1;
+                }
+                & > i:nth-of-type(2) {
+                    display: inline-block;
+                    position: absolute;
+                    z-index: 1;
+                    top: 0px;
+                    left: 0px;
+                    width: 100%;
+                    height: 100%;
+                    background: $prodSadHappyTommynaut-Hover;
+                    opacity: 0;
+                }
+            }
+
+// Logos
+    // Main logo
+    $logoMain-width: 300px;
+    $logoMain-height: 270px;
+        $logoMain-Normal: $siteElements  -752px -16px;
+        $logoMain-Hover: $siteElements  -1056px -16px;
+
+    @mixin logoMain {
+        display: block;
+        position: relative;
+        z-index: 1;
+        margin: 30px 0 0 5px;
+        width: $logoMain-width;
+        height: $logoMain-height;
+
+        & > i:nth-of-type(1) {
+            display: inline-block;
+            position: absolute;
+            z-index: 2;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background: $logoMain-Normal;
+            opacity: 1;
+        }
+        & > i:nth-of-type(2) {
+            display: inline-block;
+            position: absolute;
+            z-index: 1;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background: $logoMain-Hover;
+            opacity: 0;
+        }
+    }
+
+    // Pencil test logo
+    $logoPencilTest-width:  93px;
+    $logoPencilTest-height: 93px;
+        $logoPencilTest: $siteElements -352px -139px;
+
+    @mixin logoPencilTest {
+        display: block;
+        margin: -12px auto 0 auto;
+        width: $logoPencilTest-width;
+        height: $logoPencilTest-height;
+        background: $logoPencilTest;
+    }
+
+// Fonts
+    $Dugfont: $fontDugfont, sans-serif;
+    $Nexa: $fontNexa, sans-serif;
+    $Ubuntu: $fontUbuntu, sans-serif;
+    // Fonts for elements
+        // General field font
+            @mixin fontFieldGeneral {
+                font-family: $Ubuntu;
+                font-size: 15px;
+                font-variant: normal;
+                color: black;
+                text-align: left;
+            }
+
+        // Main header - search button
+            @mixin fontMainSearch {
+                font-family: $Ubuntu;
+                font-size: 14px;
+                font-variant: normal;
+                font-weight: $bold;
+                color: #FAFAF8;
+                text-align: center;
+                line-height: 43px;
+                @include drop-shadow();
+            }
+        // Main header - login button
+            @mixin fontMainLogin {
+                @include fontMainSearch;
+            }
+        // Main header - mainNavigation buttons
+            @mixin fontMainNavButton {
+                font-family: $Dugfont;
+                font-size: 16px;
+                color: black;
+                text-align: center;
+                line-height: 52px;
+                @include anti-aliasing;
+            }
+        // Side navigation - sideNavigation buttons
+            @mixin fontSideNavigationButton {
+                font-family: $Dugfont;
+                font-size: 20px;
+                color: black;
+                text-align: center;
+                line-height: 62px;
+                @include anti-aliasing;
+            }
+
+        // Main section
+            // H1
+            @mixin fontMainSection-H1 {
+                font-family: $Dugfont;
+                font-size: 24px;
+                color: black;
+                text-align: left;
+                @include anti-aliasing;
+            }
+            // Paragraph
+            @mixin fontMainSection-P {
+                font-family: $Ubuntu;
+                font-weight: $regular;
+                font-size: 14px;
+                color: black;
+                line-height: 18px;
+                text-align: justify;
+            }
+            // Quotes
+                // Quote paragraph
+                @mixin fontMainSection-QuoteP {
+                    font-family: $Ubuntu;
+                    font-weight: $regular;
+                    font-size: 18px;
+                    color: black;
+                    line-height: 18px;
+                    text-align: left;
+                }
+                // Quote citation
+                @mixin fontMainSection-QuoteC {
+                    font-family: $Ubuntu;
+                    font-weight: $regular;
+                    font-size: 14px;
+                    color: black;
+                    line-height: 18px;
+                    text-align: right;
+                }
+            // Product related
+                // Price
+                @mixin fontMainSection-ProdPrice {
+                    font-family: $Nexa;
+                    font-weight: $bold;
+                    font-size: 24px;
+                    color: black;
+                    letter-spacing: 1px;
+                    line-height: 18px;
+                    text-align: right;
+                }
+                // Platform
+                @mixin fontMainSection-ProdPlatform {
+                    font-family: $Nexa;
+                    font-weight: $light;
+                    font-size: 16px;
+                    color: black;
+                    letter-spacing: 1px;
+                    line-height: 18px;
+                    text-align: right;
+                }
+
+        // Main footer
+            // Get in touch
+            @mixin fontGetInTouch {
+                font-family: $Dugfont;
+                font-size: 18px;
+                color: white;
+                letter-spacing: 2px;
+                text-align: left;
+                @include drop-shadow();
+                @include user-select-none();
+            }
+            // Contact
+            @mixin fontContact {
+                font-family: $Ubuntu;
+                font-weight: $light;
+                font-size: 10px;
+                color: white;
+                letter-spacing: 1px;
+                text-align: left;
+            }
+            // Copyright
+            @mixin fontCopyright {
+                font-family: $Ubuntu;
+                font-weight: $regular;
+                font-size: 12px;
+                color: white;
+                letter-spacing: 1px;
+                text-align: center;
+            }
+            // Form labels
+            @mixin fontFormLabels {
+                font-family: $Ubuntu;
+                font-weight: $regular;
+                font-size: 12px;
+                color: white;
+                letter-spacing: 1px;
+                text-align: left;
+            }
+            // Newsletter send button
+            @mixin fontFormSendButton {
+                font-family: $Dugfont;
+                font-size: 12px;
+                color: black;
+                letter-spacing: 1px;
+                text-align: center;
+                @include anti-aliasing;
+            }
+
+// Buttons
+    // Main header - searchAndAuth buttons
+    $backgroundbuttonMainSearch-width: 110px;
+    $backgroundbuttonMainSeacrh-height: 50px;
+        $backgroundbuttonMainSearch-Normal: $siteElements -556px -204px;
+    $backgroundbuttonMainAuth-width: 68px;
+    $backgroundbuttonMainAuth-height: 50px;
+        $backgroundbuttonMainAuth-Normal: $siteElements -666px -203px;
+
+    $backgroundbuttonMainAuthStop-width: 32px;
+    $backgroundbuttonMainAuthStop-height: 32px;
+        $backgroundbuttonMainAuthStop: $siteElements -374px -940px;
+
+    @mixin buttonSearch {
+        display: inline-block;
+        position: relative;
+        width: $backgroundbuttonMainSearch-width;
+        height: $backgroundbuttonMainSeacrh-height;
+        @include user-select-none();
+
+        & > i:nth-of-type(1) {
+            display: inline-block;
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+            @include fontMainSearch;
+        }
+        & > i:nth-of-type(2) {
+            display: inline-block;
+            position: absolute;
+            z-index: 2;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background: $backgroundbuttonMainSearch-Normal;
+        }
+    }
+    @mixin buttonAuth {
+        display: inline-block;
+        position: relative;
+        width: $backgroundbuttonMainAuth-width;
+        height: $backgroundbuttonMainAuth-height;
+        @include user-select-none();
+
+        & > i:nth-of-type(1) {
+            display: inline-block;
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+            @include fontMainLogin;
+        }
+        & > i:nth-of-type(2) {
+            display: inline-block;
+            position: absolute;
+            z-index: 2;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background: $backgroundbuttonMainAuth-Normal;
+        }
+    }
+    @mixin buttonAuthStop {
+        display: inline-block;
+        position: relative;
+        width: $backgroundbuttonMainAuthStop-width;
+        height: $backgroundbuttonMainAuthStop-height;
+        @include user-select-none();
+        & > i {
+            display: inline-block;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background: $backgroundbuttonMainAuthStop;
+            opacity: 0;
+        }
+    }
+
+    // Main header - mainNavigation buttons
+    $backgroundbuttonMain-width: 140px;
+    $backgroundbuttonMain-height: 60px;
+        $backgroundbuttonMain1-Normal: $siteElements -10px -7px;
+        $backgroundbuttonMain1-Hover: $siteElements  -10px -68px;
+        $backgroundbuttonMain2-Normal: $siteElements -150px -7px;
+        $backgroundbuttonMain2-Hover: $siteElements  -150px -68px;
+        $backgroundbuttonMain3-Normal: $siteElements -288px -7px;
+        $backgroundbuttonMain3-Hover: $siteElements  -288px -68px;
+        $backgroundbuttonMain4-Normal: $siteElements -425px -7px;
+        $backgroundbuttonMain4-Hover: $siteElements  -425px -68px;
+
+    @mixin buttonMain1 {
+        display: inline-block;
+        position: relative;
+        width: $backgroundbuttonMain-width;
+        height: $backgroundbuttonMain-height;
+        @include user-select-none();
+
+        & > i:nth-of-type(1) {
+            display: inline-block;
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+            @include fontMainNavButton;
+        }
+        & > i:nth-of-type(2) {
+            display: inline-block;
+            position: absolute;
+            z-index: 2;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background: $backgroundbuttonMain1-Normal;
+            opacity: 1;
+        }
+        & > i:nth-of-type(3) {
+            display: inline-block;
+            position: absolute;
+            z-index: 1;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background: $backgroundbuttonMain1-Hover;
+            opacity: 0;
+        }
+    }
+    @mixin buttonMain2 {
+        display: inline-block;
+        position: relative;
+        width: $backgroundbuttonMain-width;
+        height: $backgroundbuttonMain-height;
+        @include user-select-none();
+
+        & > i:nth-of-type(1) {
+            display: inline-block;
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+            @include fontMainNavButton;
+        }
+        & > i:nth-of-type(2) {
+            display: inline-block;
+            position: absolute;
+            z-index: 2;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background: $backgroundbuttonMain2-Normal;
+            opacity: 1;
+        }
+        & > i:nth-of-type(3) {
+            display: inline-block;
+            position: absolute;
+            z-index: 1;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background: $backgroundbuttonMain2-Hover;
+            opacity: 0;
+        }
+    }
+    @mixin buttonMain3 {
+        display: inline-block;
+        position: relative;
+        width: $backgroundbuttonMain-width;
+        height: $backgroundbuttonMain-height;
+        @include user-select-none();
+
+        & > i:nth-of-type(1) {
+            display: inline-block;
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+            @include fontMainNavButton;
+        }
+        & > i:nth-of-type(2) {
+            display: inline-block;
+            position: absolute;
+            z-index: 2;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background: $backgroundbuttonMain3-Normal;
+            opacity: 1;
+        }
+        & > i:nth-of-type(3) {
+            display: inline-block;
+            position: absolute;
+            z-index: 1;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background: $backgroundbuttonMain3-Hover;
+            opacity: 0;
+        }
+    }
+    @mixin buttonMain4 {
+        display: inline-block;
+        position: relative;
+        width: $backgroundbuttonMain-width;
+        height: $backgroundbuttonMain-height;
+        @include user-select-none();
+
+        & > i:nth-of-type(1) {
+            display: inline-block;
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+            @include fontMainNavButton;
+        }
+        // Hover
+        & > i:nth-of-type(2) {
+            display: inline-block;
+            position: absolute;
+            z-index: 2;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background: $backgroundbuttonMain4-Normal;
+            opacity: 1;
+        }
+        & > i:nth-of-type(3) {
+            display: inline-block;
+            position: absolute;
+            z-index: 1;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background: $backgroundbuttonMain4-Hover;
+            opacity: 0;
+        }
+    }
+
+    // Side navigation - sideNavigation buttons
+    $backgroundButtonSideNav-width: 250px;
+    $backgroundButtonSideNav-height: 380px;
+        $backgroundButtonSideNav-1: $siteElements   -19px -547px; // Normal state
+        $backgroundButtonSideNav-2: $siteElements  -269px -547px; // 1st hover
+        $backgroundButtonSideNav-3: $siteElements  -519px -547px; // 2nd hover
+        $backgroundButtonSideNav-4: $siteElements  -769px -547px; // 3rd hover
+        $backgroundButtonSideNav-5: $siteElements -1019px -547px; // 4th hover
+        $backgroundButtonSideNav-6: $siteElements -1269px -547px; // 5th hover
+
+    @mixin buttonSideNav {
+        display: block;
+        position: relative;
+        z-index: 1;
+
+        > i:nth-of-type(1) {
+            display: block;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: $backgroundButtonSideNav-width;
+            height: $backgroundButtonSideNav-height;
+            background: $backgroundButtonSideNav-1;
+            opacity: 1;
+        }
+        > i:nth-of-type(2) {
+            display: block;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: $backgroundButtonSideNav-width;
+            height: $backgroundButtonSideNav-height;
+            background: $backgroundButtonSideNav-2;
+            opacity: 0;
+        }
+        > i:nth-of-type(3) {
+            display: block;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: $backgroundButtonSideNav-width;
+            height: $backgroundButtonSideNav-height;
+            background: $backgroundButtonSideNav-3;
+            opacity: 0;
+        }
+        > i:nth-of-type(4) {
+            display: block;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: $backgroundButtonSideNav-width;
+            height: $backgroundButtonSideNav-height;
+            background: $backgroundButtonSideNav-4;
+            opacity: 0;
+        }
+        > i:nth-of-type(5) {
+            display: block;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: $backgroundButtonSideNav-width;
+            height: $backgroundButtonSideNav-height;
+            background: $backgroundButtonSideNav-5;
+            opacity: 0;
+        }
+        > i:nth-of-type(6) {
+            display: block;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: $backgroundButtonSideNav-width;
+            height: $backgroundButtonSideNav-height;
+            background: $backgroundButtonSideNav-6;
+            opacity: 0;
+        }
+    }
+
+    // Main section - buy now button
+    $backgroundButtonMainSectionBuyNow-width:  142px;
+    $backgroundButtonMainSectionBuyNow-height: 135px;
+        $backgroundButtonMainSectionBuyNow-Normal: $siteElements -820px -345px; // Normal state
+        $backgroundButtonMainSectionBuyNow-Hover:  $siteElements -990px -345px;
+
+    @mixin buttonMainSection-BuyNow {
+        display: inline-block;
+        position: relative;
+        width: $backgroundButtonMainSectionBuyNow-width;
+        height: $backgroundButtonMainSectionBuyNow-height;
+
+        & > i:nth-of-type(1) {
+            display: inline-block;
+            position: absolute;
+            z-index: 2;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background: $backgroundButtonMainSectionBuyNow-Normal;
+            opacity: 1;
+        }
+        & > i:nth-of-type(2) {
+            display: inline-block;
+            position: absolute;
+            z-index: 1;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background: $backgroundButtonMainSectionBuyNow-Hover;
+            opacity: 0;
+        }
+    }
+
+    // Main footer - mainFooter buttons
+    $backgroundButtonFooterSocialButton-width:  90px;
+    $backgroundButtonFooterSocialButton-height: 90px;
+        // 1st row
+        $backgroundButtonFooterFacebook-Normal:   $siteElements   -6px -141px;
+        $backgroundButtonFooterFacebook-Hover:    $siteElements   -6px -335px;
+        $backgroundButtonFooterTwitter-Normal:    $siteElements -100px -141px;
+        $backgroundButtonFooterTwitter-Hover:     $siteElements -100px -335px;
+        $backgroundButtonFooterYoutube-Normal:    $siteElements -194px -141px;
+        $backgroundButtonFooterYoutube-Hover:     $siteElements -194px -335px;
+        // 2nd row
+        $backgroundButtonFooterGooglep-Normal:    $siteElements   -6px -235px;
+        $backgroundButtonFooterGooglep-Hover:     $siteElements   -6px -429px;
+        $backgroundButtonFooterPinterest-Normal:  $siteElements -100px -235px;
+        $backgroundButtonFooterPinterest-Hover:   $siteElements -100px -429px;
+        $backgroundButtonFooterRSS-Normal:        $siteElements -194px -235px;
+        $backgroundButtonFooterRSS-Hover:         $siteElements -194px -429px;
+
+    @mixin buttonFooterSocial-Facebook {
+        display: inline-block;
+        position: relative;
+        width: $backgroundButtonFooterSocialButton-width;
+        height: $backgroundButtonFooterSocialButton-height;
+
+        & > i:nth-of-type(1) {
+            display: inline-block;
+            position: absolute;
+            z-index: 2;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background: $backgroundButtonFooterFacebook-Normal;
+            opacity: 1;
+        }
+        & > i:nth-of-type(2) {
+            display: inline-block;
+            position: absolute;
+            z-index: 1;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background: $backgroundButtonFooterFacebook-Hover;
+            opacity: 0;
+        }
+    }
+    @mixin buttonFooterSocial-Twitter {
+        display: inline-block;
+        position: relative;
+        width: $backgroundButtonFooterSocialButton-width;
+        height: $backgroundButtonFooterSocialButton-height;
+
+        & > i:nth-of-type(1) {
+            display: inline-block;
+            position: absolute;
+            z-index: 2;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background: $backgroundButtonFooterTwitter-Normal;
+            opacity: 1;
+        }
+        & > i:nth-of-type(2) {
+            display: inline-block;
+            position: absolute;
+            z-index: 1;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background: $backgroundButtonFooterTwitter-Hover;
+            opacity: 0;
+        }
+    }
+    @mixin buttonFooterSocial-Youtube {
+        display: inline-block;
+        position: relative;
+        width: $backgroundButtonFooterSocialButton-width;
+        height: $backgroundButtonFooterSocialButton-height;
+
+        & > i:nth-of-type(1) {
+            display: inline-block;
+            position: absolute;
+            z-index: 2;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background: $backgroundButtonFooterYoutube-Normal;
+            opacity: 1;
+        }
+        & > i:nth-of-type(2) {
+            display: inline-block;
+            position: absolute;
+            z-index: 1;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background: $backgroundButtonFooterYoutube-Hover;
+            opacity: 0;
+        }
+    }
+    @mixin buttonFooterSocial-Googlep {
+        display: inline-block;
+        position: relative;
+        width: $backgroundButtonFooterSocialButton-width;
+        height: $backgroundButtonFooterSocialButton-height;
+
+        & > i:nth-of-type(1) {
+            display: inline-block;
+            position: absolute;
+            z-index: 2;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background: $backgroundButtonFooterGooglep-Normal;
+            opacity: 1;
+        }
+        & > i:nth-of-type(2) {
+            display: inline-block;
+            position: absolute;
+            z-index: 1;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background: $backgroundButtonFooterGooglep-Hover;
+            opacity: 0;
+        }
+    }
+    @mixin buttonFooterSocial-Pinterest {
+        display: inline-block;
+        position: relative;
+        width: $backgroundButtonFooterSocialButton-width;
+        height: $backgroundButtonFooterSocialButton-height;
+
+        & > i:nth-of-type(1) {
+            display: inline-block;
+            position: absolute;
+            z-index: 2;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background: $backgroundButtonFooterPinterest-Normal;
+            opacity: 1;
+        }
+        & > i:nth-of-type(2) {
+            display: inline-block;
+            position: absolute;
+            z-index: 1;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background: $backgroundButtonFooterPinterest-Hover;
+            opacity: 0;
+        }
+    }
+    @mixin buttonFooterSocial-RSS {
+        display: inline-block;
+        position: relative;
+        width: $backgroundButtonFooterSocialButton-width;
+        height: $backgroundButtonFooterSocialButton-height;
+
+        & > i:nth-of-type(1) {
+            display: inline-block;
+            position: absolute;
+            z-index: 2;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background: $backgroundButtonFooterRSS-Normal;
+            opacity: 1;
+        }
+        & > i:nth-of-type(2) {
+            display: inline-block;
+            position: absolute;
+            z-index: 1;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background: $backgroundButtonFooterRSS-Hover;
+            opacity: 0;
+        }
+    }
+
+    // Newsletter - send button
+    $backgroundButtonFooterNewsletter-width:  104px;
+    $backgroundButtonFooterNewsletter-height: 42px;
+        $backgroundButtonFooterNewsletter: $siteElements -436px -417px;
+
+    @mixin buttonFooterNewsletter {
+        display: inline-block;
+        position: relative;
+        padding: 0 0 4px 0;
+        width: $backgroundButtonFooterNewsletter-width;
+        height: $backgroundButtonFooterNewsletter-height;
+        background: $backgroundButtonFooterNewsletter;
+        @include fontFormSendButton;
+        @include user-select-none();
+    }
+
+// Fields & textareas
+    // Main header fields
+    $backgroundHeaderField-width: 186px;
+    $backgroundHeaderField-height: 48px;
+        $backgroundHeaderField: $siteElements -551px -150px;
+
+    @mixin fieldMainHeader {
+        display: inline-block;
+        padding: 0 20px 6px 20px;
+        width: $backgroundHeaderField-width;
+        height: $backgroundHeaderField-height;
+        background: $backgroundHeaderField;
+        @include fontFieldGeneral;
+    }
+
+    // Main footer - mainFooter fields
+        // Newsletter fields
+        $backgroundFooterField-width:  240px;
+        $backgroundFooterField-height: 50px;
+            $backgroundFooterField: $siteElements -299px -257px;
+
+        @mixin fieldMainFooter {
+            display: block;
+            padding: 0 20px 10px 15px;
+            width: $backgroundFooterField-width;
+            height: $backgroundFooterField-height;
+            background: $backgroundFooterField;
+            @include fontFieldGeneral;
+        }
+        // Newsletter textarea
+        $backgroundFooterTextarea-width:  240px;
+        $backgroundFooterTextarea-height: 109px;
+            $backgroundFooterTextarea: $siteElements -300px -308px;
+
+        @mixin textareaMainFooter {
+            display: block;
+            padding: 22px 20px 20px 20px;
+            width: $backgroundFooterTextarea-width;
+            height: $backgroundFooterTextarea-height;
+            resize: none;
+            background: $backgroundFooterTextarea;
+            @include fontFieldGeneral;
+        }
+
+// Lists
+    // Side navigation - sideNavigation menu list
+    @mixin listSideNav {
+        display: block;
+        position: absolute;
+        z-index: 2;
+        margin: 8px 0 0 16px;
+        width: 215px;
+
+        li {
+            height: 70px;
+            @include fontSideNavigationButton;
+            @include user-select-none();
+        }
+    }
+
+// Fundamental mixins
+    @mixin outline($size: 1px, $style: dotted, $color: red) {
+        outline: $size $style $color;
+    }
+    @mixin authFieldVisibility($authFieldsOpen: true) {
+        @if $authFieldsOpen == true {
+            opacity: 1;
+        } @else {
+            opacity: 0;
+        }
+    }
+    @mixin shadow($horOffset, $verOffset, $blurRadius, $spreadRadius, $color) {
+        -moz-box-shadow:    $horOffset $verOffset $blurRadius $spreadRadius $color;
+        -webkit-box-shadow: $horOffset $verOffset $blurRadius $spreadRadius $color;
+        box-shadow:         $horOffset $verOffset $blurRadius $spreadRadius $color;
+    }
+    @mixin user-select-none($cursor: default) {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+        cursor: $cursor;
+    }
+    @mixin user-select-default {
+        -webkit-touch-callout: text;
+        -webkit-user-select: text;
+        -khtml-user-select: text;
+        -moz-user-select: text;
+        -ms-user-select: text;
+        -o-user-select: text;
+        user-select: text;
+    }
+
+// Icons & logos

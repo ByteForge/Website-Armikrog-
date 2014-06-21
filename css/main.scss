@@ -1,0 +1,936 @@
+@import 'defaults';
+
+$leftOffset: 17px;
+$rightOffset: 31px;
+
+body {
+    font-size: 0;
+    background-color: $backgroundColor;
+}
+    #docWrapper {
+        display: block;
+        margin: 0 auto;
+    }
+
+    #siteWrapper {
+        display: block;
+        margin: 0 auto;
+        max-width: 1350px;
+        background-image: $backgroundSite;
+        background-position: center top;
+        background-repeat: repeat-y;
+        @include shadow(0, 0, 50px, 25px, #666);
+    }
+        #pageWrapper {
+            display: block;
+            margin: 0 auto;
+            padding: 0 $rightOffset 0 $leftOffset;
+            width: 1048px;
+            background-image: $backgroundWrapper;
+        }
+            #mainHeader {
+                display: inline-block;
+                position: relative;
+                float: right;
+                width: 752px;
+                height: 150px;
+                //background-color: crimson;
+
+                & > .searchAndAuth {
+                    display: inline-block;
+                    position: absolute;
+                    margin: 5px 0 0 0;
+                    right: 0;
+
+                    & > .searchField {
+                        @include fieldMainHeader;
+                    }
+                    & > .searchButton {
+                        @include buttonSearch;
+                    }
+                    & > .loginButton {
+                        @include buttonAuth;
+                        margin: 0 123px 0 0;
+                    }
+                    & > .loginStop {
+                        @include buttonAuthStop;
+                        margin: 0 25px 0 -55px;
+                    }
+                    & > .authUserField {
+                        @include fieldMainHeader;
+                        @include authFieldVisibility($authFieldsOpen);
+                        position: absolute;
+                        margin-top: -10px;
+                        top: 50px;
+                        right: 10px;
+                    }
+                    & > .authPassField {
+                        @include fieldMainHeader;
+                        @include authFieldVisibility($authFieldsOpen);
+                        position: absolute;
+                        margin-top: -15px;
+                        top: 95px;
+                        right: 10px;
+                    }
+                }
+                & > .mainNavigation {
+                    display: inline-block;
+                    position: absolute;
+                    bottom: 0;
+
+                    & > .mainButton1 {
+                        @include buttonMain1;
+                    }
+                    & > .mainButton2 {
+                        @include buttonMain2;
+                    }
+                    & > .mainButton3 {
+                        @include buttonMain3;
+                    }
+                    & > .mainButton4 {
+                        @include buttonMain4;
+                    }
+                }
+            }
+            #sideNavigation {
+                display: inline-block;
+                float: left;
+                top: 0;
+                left: $leftOffset;
+                width: 235px;
+                height: 500px;
+                //background-color: cornflowerblue;
+
+                > .logo {
+                    @include logoMain;
+                }
+                > .menu {
+                    display: block;
+                    position: relative;
+                    z-index: 2;
+                    margin: -15px 0 0 25px;
+
+                    & > .list {
+                        @include listSideNav;
+                    }
+                    & > div {
+                        @include buttonSideNav;
+                    }
+                }
+            }
+            #mainSection {
+                display: block;
+                float: right;
+                top: 200px;
+                right: $rightOffset;
+                width: 70%;
+                height: 500px;
+                //background-color: greenyellow;
+
+                > .content {
+                    display: block;
+                    float: left;
+                    width: 420px;
+
+                    > h1 {
+                        margin: 40px 0 28px 0;
+                        @include fontMainSection-H1;
+                    }
+                    > p {
+                        margin: 0 0 15px 0;
+                        padding: 0 50px 0 0;
+                        @include fontMainSection-P;
+                    }
+                    > blockquote {
+                        margin: 0 0 15px 0;
+                        padding: 0 50px 0 0;
+                        > p {
+                            @include fontMainSection-QuoteP;
+                            &:before {
+                                content: '"';
+                            }
+                            &:after {
+                                content: '"';
+                            }
+                        }
+                        > cite {
+                            display: block;
+                            text-align: right;
+                            @include fontMainSection-QuoteC;
+                            &:before {
+                                content: "- ";
+                            }
+                        }
+                    }
+                    & > blockquote:nth-of-type(3) {
+                        > p {
+                            font-style: italic;
+                        }
+                    }
+                    > .arrowToRight {
+                        margin: 0 0 0 -20px;
+                        @include arrowBuyNowToRight;
+                    }
+                    > .buyNow {
+                        @include buttonMainSection-BuyNow;
+                    }
+                    > .arrowToLeft {
+                        @include arrowBuyNowToLeft;
+                    }
+                }
+                > .product {
+                    display: block;
+                    float: right;
+                    width: 275px;
+
+                    > .box {
+                        margin: 35px 0 0 0;
+                        @include prodProductBox;
+                    }
+                    > .price {
+                        margin: -10px 40px 0 0;
+                        @include fontMainSection-ProdPrice;
+                    }
+                    > .platform {
+                        margin: 16px 40px 0 0;
+                        @include fontMainSection-ProdPlatform;
+                    }
+                    > figure {
+                        margin: -67px 0 0 5px;
+                        @include prodSadHappyTommynaut;
+                    }
+                }
+
+
+            }
+            #mainFooter {
+                display: block;
+                clear: both;
+                padding: 50px 70px 0 70px;
+                width: 100%;
+                height: 365px;
+                background-image: $backgroundFooter;
+                background-position: center center;
+                background-repeat: no-repeat;
+
+                > .social {
+                    display: inline-block;
+                    float: left;
+                    width: 34%;
+                    height: 250px;
+
+                    > p {
+                        margin: 0 0 22px 0;
+                        @include fontGetInTouch;
+                    }
+                    > .facebook {
+                        margin-bottom: 10px;
+                        @include buttonFooterSocial-Facebook;
+                    }
+                    > .twitter {
+                        margin-bottom: 10px;
+                        @include buttonFooterSocial-Twitter;
+                    }
+                    > .youtube {
+                        margin-bottom: 10px;
+                        @include buttonFooterSocial-Youtube;
+                    }
+                    > .googlep {
+                        @include buttonFooterSocial-Googlep;
+                    }
+                    > .pinterest {
+                        @include buttonFooterSocial-Pinterest;
+                    }
+                    > .rss {
+                        @include buttonFooterSocial-RSS;
+                    }
+                }
+                > .contact {
+                    display: inline-block;
+                    float: left;
+                    width: 37%;
+                    height: 250px;
+
+                    > .list {
+                        display: block;
+                        margin: 40px 0 0 0;
+
+                        > li {
+                            display: list-item;
+                            margin: 0 0 10px 0;
+                            @include fontContact;
+                            &:before {
+                                content: "";
+                                display: inline-block;
+                                margin-right: 5px;
+                                width: 32px;
+                                height: 32px;
+                                vertical-align: middle;
+                                background: $imageBullet;
+                            }
+                        }
+                    }
+                    > .logo {
+                        @include logoPencilTest;
+                    }
+                }
+                > .newsletter {
+                    display: inline-block;
+                    float: left;
+                    width: 29%;
+                    height: 250px;
+
+                    form {
+                        > label {
+                            display: block;
+                            margin: -6px 0 0 7px;
+                            @include fontFormLabels;
+                        }
+                        > .name {
+                            @include fieldMainFooter;
+                        }
+                        > .email {
+                            @include fieldMainFooter;
+                        }
+                        > .message {
+                            @include textareaMainFooter;
+                        }
+                        > button {
+                            margin-left: 135px;
+                            @include buttonFooterNewsletter;
+                        }
+                    }
+                }
+                > .copyright {
+                    display: inline-block;
+                    position: relative;
+                    clear: both;
+                    margin: -7px 0 0 0;
+                    width: 100%;
+                    @include fontCopyright;
+                }
+            }
+
+// Lightbox specifics
+    // Fonts
+    // Buttons
+        @mixin lightboxArrowToRight {
+            display: inline-block;
+            width:  70px;
+            height: 68px;
+            background: $siteElements -357px -1010px;
+        }
+        @mixin lightboxArrowToLeft {
+            display: inline-block;
+            width:  70px;
+            height: 68px;
+            background: $siteElements -357px -1116px;
+        }
+        @mixin lightboxClose {
+            display: inline-block;
+            position: relative;
+            width: $backgroundbuttonMainAuthStop-width;
+            height: $backgroundbuttonMainAuthStop-height;
+            @include user-select-none();
+            & > i {
+                display: inline-block;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                background: $backgroundbuttonMainAuthStop;
+            }
+        }
+    // Images
+
+    #lightboxOverlay {
+        display: block;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: black;
+        //opacity: 0.25;
+
+        > div {
+            display: block;
+            margin: 0 auto;
+            width: 500px;
+
+            > .arrowToLeft {
+                margin: 0 5px 0 0;
+                @include lightboxArrowToLeft;
+            }
+            > .container {
+                display: inline-block;
+                position: relative;
+                width:  250px;
+                height: 100px;
+
+                > .close {
+                    display: inline-block;
+                    position: absolute;
+                    z-index: 100;
+                    top:   5px;
+                    right: 5px;
+                    width:  32px;
+                    height: 32px;
+
+                    > div {
+                        @include lightboxClose;
+                    }
+                }
+                > i {
+                    display: block;
+                    position: absolute;
+                    top:    40px;
+                    right:  20px;
+                    bottom: 20px;
+                    left:   20px;
+                    background-color: crimson;
+                }
+                > img {
+                    margin: 0 0 0 2px;
+                    width:  100%;
+                    height: 100%;
+                }
+            }
+            > .arrowToRight {
+                margin: 0 0 0 5px;
+                @include lightboxArrowToRight;
+            }
+        }
+    }
+
+// Gallery page specifics (screenshots, making of)
+    // Fonts
+    // Images
+        @mixin galleryThumbFrame {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: $siteElements -1225px -1493px;
+        }
+    // Buttons
+
+#mainSection {
+    > .screenshots {
+        display: block;
+        padding: 30px 0 0 0;
+        width: 100%;
+        height: 100%;
+
+        > div {
+            display: inline-block;
+            position: relative;
+            margin: 0 5px 0 0;
+            width: 160px;
+            height: 150px;
+
+            > i {
+                z-index: 2;
+                @include galleryThumbFrame;
+            }
+            > img {
+                display: block;
+                position: absolute;
+                z-index: 1;
+                top: 19px;
+                left: 20px;
+            }
+        }
+    }
+}
+#mainSection {
+    > .theMaking {
+        display: block;
+        padding: 30px 0 0 0;
+        width: 100%;
+        height: 100%;
+
+        > div {
+            display: inline-block;
+            position: relative;
+            margin: 0 5px 0 0;
+            width: 160px;
+            height: 150px;
+
+            > i {
+                z-index: 2;
+                @include galleryThumbFrame;
+            }
+            > img {
+                display: block;
+                position: absolute;
+                z-index: 1;
+                top: 19px;
+                left: 20px;
+            }
+        }
+    }
+}
+
+// Characters page specifics
+    // Fonts
+        @mixin charactersFont-H1 {
+            @include fontMainSection-H1;
+        }
+        @mixin charactersFont-P {
+            @include fontMainSection-P;
+        }
+        @mixin charactersFont-Side-H2 {
+            font-family: $Dugfont;
+            font-size: 16px;
+            color: black;
+            letter-spacing: 1px;
+            text-align: left;
+            @include anti-aliasing;
+        }
+        @mixin charactersFont-Side-P {
+            font-family: $Ubuntu;
+            font-weight: $light;
+            font-size: 13px;
+            color: black;
+            letter-spacing: 1px;
+            text-align: left;
+            line-height: 16px;
+        }
+        @mixin characterFontToGallery {
+            font-family: $Ubuntu;
+            font-size: 14px;
+            font-variant: normal;
+            font-weight: $bold;
+            color: black;
+            text-align: center;
+            line-height: 43px;
+            @include drop-shadow(1px, 1px, 0, #FAFAF8);
+        }
+    // Images
+        @mixin charactersSideBackground {
+            background: $siteElements -1175px -960px;
+        }
+        @mixin charactersThumbnailBackground {
+            display: inline-block;
+            margin: 0 5px 0 0;
+            padding: 15px 22px 20px 20px;
+            width: 265px;
+            height: 160px;
+            background: $siteElements -1169px -1312px;
+
+            > img {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        @mixin charactersMainCharacter {
+            $margin: 0 0 0 -30px;
+            $width: 450px;
+            $height: 295px;
+
+            > i:nth-of-type(1) {
+                display: block;
+                position: absolute;
+                z-index: 3;
+                margin: $margin;
+                top: 0;
+                left: 0;
+                width: $width;
+                height: $height;
+                background: $siteElements -1066px -1635px;
+            }
+            > i:nth-of-type(2) {
+                display: block;
+                position: absolute;
+                z-index: 2;
+                margin: $margin;
+                top: 0;
+                left: 0;
+                width: $width;
+                height: $height;
+                background: $siteElements -1066px -1916px;
+                opacity: 0;
+            }
+            > i:nth-of-type(3) {
+                display: block;
+                position: absolute;
+                z-index: 1;
+                margin: $margin;
+                top: 0;
+                left: 0;
+                width: $width;
+                height: $height;
+                background: $siteElements -1066px -2205px;
+                opacity: 0;
+            }
+        }
+    // Buttons
+        @mixin charactersGoToGallery {
+            display: inline-block;
+            position: relative;
+            padding: 14px 40px 0 0;
+            width: 125px;
+            height: 80px;
+            @include user-select-none();
+
+            & > i:nth-of-type(1) {
+                display: inline-block;
+                position: relative;
+                z-index: 10;
+                width: 100%;
+                height: 100%;
+                @include characterFontToGallery;
+            }
+            & > i:nth-of-type(2) {
+                display: inline-block;
+                position: absolute;
+                z-index: 2;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                background: $siteElements -333px -1225px;
+            }
+        }
+
+#mainSection {
+    > .characters {
+        display: block;
+        width: 100%;
+        height: 500px;
+
+        > h1 {
+            padding: 40px 0 0 18px;
+            height: 100px;
+            @include charactersFont-H1;
+        }
+        > p {
+            padding: 0 190px 25px 10px;
+            @include charactersFont-P;
+        }
+        > div:nth-of-type(1) {
+            display: inline-block;
+            position: relative;
+            width: 420px;
+            height: 305px;
+            //background-color: cornflowerblue;
+
+            > div:nth-of-type(1) {
+                display: inline-block;
+                position: absolute;
+                z-index: 10;
+                top: 25px;
+                left: 5px;
+                width: 50%;
+                height: 270px;
+                opacity: 0;
+            }
+            > div:nth-of-type(2) {
+                display: inline-block;
+                position: absolute;
+                z-index: 9;
+                top: 100px;
+                right: 5px;
+                width: 50%;
+                height: 185px;
+                opacity: 0;
+            }
+            @include  charactersMainCharacter;
+        }
+        > div:nth-of-type(2) {
+            display: inline-block;
+            position: relative;
+            float: right;
+            padding: 40px 35px 0 15px;
+            width: 268px;
+            height: 305px;
+            @include charactersSideBackground;
+
+            > h2 {
+                margin: 0 0 15px 0;
+                @include charactersFont-Side-H2;
+            }
+            > p {
+                @include charactersFont-Side-P;
+            }
+        }
+    }
+}
+
+#toGallery {
+    display: block;
+    clear: both;
+    padding: 22px 0 0 20px;
+    height: 180px;
+
+    > div:nth-of-type(1) {
+        @include charactersThumbnailBackground;
+    }
+    > div:nth-of-type(2) {
+        @include charactersThumbnailBackground;
+    }
+    > div:nth-of-type(3) {
+        @include charactersThumbnailBackground;
+    }
+    > .toGalleryButton {
+        margin: 10px 0 0 0;
+        @include charactersGoToGallery;
+    }
+}
+
+// Merchandise page specifics
+    // Fonts
+        @mixin merchandiseFont-H2 {
+            font-family: $Dugfont;
+            font-size: 16px;
+            color: black;
+            letter-spacing: 1px;
+            text-align: left;
+            @include anti-aliasing;
+        }
+        @mixin merchandiseFont-I {
+            font-family: $Nexa;
+            font-weight: $bold;
+            font-size: 18px;
+            color: black;
+            letter-spacing: 1px;
+            text-align: left;
+            @include anti-aliasing;
+        }
+        @mixin merchandiseFont-P {
+            font-family: $Ubuntu;
+            font-weight: $light;
+            font-size: 12px;
+            color: black;
+            letter-spacing: 1px;
+            text-align: justify;
+            line-height: 14px;
+        }
+    // Images
+        @mixin merchandiseGears {
+            width: 100%;
+            height: 100%;
+            background: $siteElements -59px -1451px;
+        }
+    // Buttons
+        @mixin merchandiseGoToShopButton {
+            display: inline-block;
+            position: relative;
+            width:  145px;
+            height: 55px;
+            @include user-select-none();
+
+            & > i:nth-of-type(1) {
+                display: inline-block;
+                position: relative;
+                z-index: 10;
+                padding: 3px 0 0 0;
+                width: 100%;
+                height: 100%;
+                @include fontMainSearch;
+            }
+            & > i:nth-of-type(2) {
+                display: inline-block;
+                position: absolute;
+                z-index: 2;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                background: $siteElements -575px -264px;
+            }
+        }
+
+#mainSection {
+    > .gears {
+        display: block;
+        float: left;
+        width: 368px;
+        height: 500px;
+
+        > div {
+            margin: 25px 0 0 -10px;
+            @include merchandiseGears;
+        }
+    }
+    > .gearDesc {
+        display: block;
+        float: right;
+        padding: 50px 35px 0 0;
+        width: 328px;
+        height: 500px;
+        > div {
+            margin: 0 0 55px 0;
+
+            > h2 {
+                margin: 0 0 17px 0;
+                @include merchandiseFont-H2;
+            }
+            > i {
+                display: block;
+                margin: 0 0 15px 0;
+                @include merchandiseFont-I;
+            }
+            > p {
+                margin: 0 0 15px 0;
+                @include merchandiseFont-P;
+            }
+            > div {
+                margin: 0 0 0 -8px;
+                @include merchandiseGoToShopButton;
+            }
+        }
+    }
+}
+
+// Community page specifics
+    // Fonts
+        @mixin communityFont-H3 {
+            font-family: $Ubuntu;
+            font-weight: $light;
+            font-size: 18px;
+            color: black;
+            letter-spacing: 1px;
+            text-align: left;
+        }
+        @mixin communityFont-I {
+            font-family: $Ubuntu;
+            font-weight: $light;
+            font-size: 10px;
+            color: #58595B;
+            letter-spacing: 1px;
+            text-align: left;
+        }
+        @mixin communityFont-P {
+            font-family: $Ubuntu;
+            font-weight: $light;
+            font-size: 13px;
+            color: #414042;
+            letter-spacing: 1px;
+            text-align: left;
+        }
+        @mixin postsFont-DIV {
+            font-family: $Ubuntu;
+            font-weight: $light;
+            font-size: 10px;
+            color: #58595B;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+        @mixin postsFont-P {
+            font-family: $Ubuntu;
+            font-weight: $light;
+            font-size: 12px;
+            color: black;
+            letter-spacing: 1px;
+            text-align: left;
+        }
+        @mixin postsFont-I {
+            font-family: $Ubuntu;
+            font-weight: $light;
+            font-size: 12px;
+            color: #58595B;
+            letter-spacing: 0.5px;
+            text-align: left;
+        }
+    // Images
+        @mixin postsAvatar {
+            display: inline-block;
+            float: left;
+            padding: 60px 0 0 0;
+            width: 65px;
+            height: 80px;
+        }
+        @mixin poststAvatar1 {
+            @include postsAvatar;
+            background: $siteElements 7px -1345px;
+        }
+        @mixin poststAvatar2 {
+            @include postsAvatar;
+            background: $siteElements -63px -1345px;
+        }
+        @mixin poststAvatar3 {
+            @include postsAvatar;
+            background: $siteElements 7px -1345px;
+        }
+        @mixin poststAvatar4 {
+            @include postsAvatar;
+            background: $siteElements -134px -1345px;
+        }
+        @mixin poststAvatar5 {
+            @include postsAvatar;
+            background: $siteElements -205px -1345px;
+        }
+
+#mainSection {
+    > .community {
+        display: block;
+        float: left;
+        width: 480px;
+        height: 500px;
+        //background-color: red;
+
+        /*
+        > div:nth-of-type(1) > h3 {
+            color: #E6520B;
+        }
+        */
+        > div {
+            > h3 {
+                display: inline-block;
+                margin: 20px 0 22px 0;
+                @include communityFont-H3;
+            }
+            > i {
+                display: inline-block;
+                float: right;
+                margin: 27px 0 0 0;
+                width: 100px;
+                @include communityFont-I;
+            }
+            > p {
+                display: block;
+                margin: 5px 0 17px 0;
+                @include communityFont-P;
+            }
+        }
+    }
+    > .posts {
+        display: block;
+        float: right;
+        margin: 25px 0 0 0;
+        width: 215px;
+        height: 500px;
+        //background-color: green;
+        > div:nth-of-type(1) > div { @include poststAvatar1; }
+        > div:nth-of-type(2) > div { @include poststAvatar2; }
+        > div:nth-of-type(3) > div { @include poststAvatar3; }
+        > div:nth-of-type(4) > div { @include poststAvatar4; }
+        > div:nth-of-type(5) > div { @include poststAvatar5; }
+
+        > div {
+            clear: both;
+            margin: 0 0 47px 0;
+            padding: 0 30px 0 0;
+
+            > div {
+                @include postsFont-DIV;
+            }
+            > p {
+                margin: 0 0 15px 80px;
+                @include postsFont-P;
+            }
+            > i {
+                display: inline-block;
+                margin: 0 0 0 15px;
+                @include postsFont-I;
+            }
+        }
+    }
+}
