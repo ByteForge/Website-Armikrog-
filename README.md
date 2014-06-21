@@ -14,6 +14,7 @@ Used Techniques
 ---------------
 * jQuery
 * SASS/SCSS
+* GSAP (TweenLite)
 
 
 
